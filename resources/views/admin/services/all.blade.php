@@ -1,7 +1,6 @@
 @include('admin.layout.header', [
     'PageTitle' => 'New Service',
 ])
-
 <body>
     @include('admin.layout.preloader')
     <div id="main-wrapper">

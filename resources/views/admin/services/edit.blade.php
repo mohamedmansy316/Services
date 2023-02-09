@@ -72,7 +72,7 @@
                                                         <span class="input-group-text">صورة الخدمة</span>
                                                     </div>
                                                     <div class="custom-file">
-                                                        <input id="icon" name="icon" type="file" class="custom-file-input" required>
+                                                        <input id="icon" name="icon" type="file" class="custom-file-input">
                                                         <label class="custom-file-label">اختر صورة</label>
                                                     </div>
                                                 </div>
@@ -103,7 +103,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">إضافة خدمة</button>
+                                        <button type="submit" class="btn btn-primary">تعديل الخدمة</button>
                                 </form>
                             </div>
                         </div>

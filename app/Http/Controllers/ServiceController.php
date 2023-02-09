@@ -11,11 +11,23 @@ use Illuminate\Support\Facades\Validator;
 use Image as ImageLib;
 
 class ServiceController extends Controller{
+    public function getServices($lang = 'ar') {
+        $TheLang = Languages::where('lang_code', '=', $lang)->first();
+        if(!$TheLang){
+            abort(404);
+        }
+        $AllServices = Service::where('lang_name', '=', $TheLang->id)->get();
+        $MainServices = Service::where([
+            'lang_name' => $TheLang->id,
+            'section' => 'websites'
+        ])->get();
+        return view('home', compact('AllServices', 'MainServices'));
+    }
     public function getAdminServices(){
         $AllServices = Service::all();
         return view('admin.services.all', compact('AllServices'));
     }
-    public function getCreateService(){
+    public function getCreateService($lang){
         $AllLanguages = Languages::select('id', 'lang_code', 'lang_name')->get();
         return view('admin.services.new', compact('AllLanguages'));
     }
@@ -68,7 +80,7 @@ class ServiceController extends Controller{
             'title' => 'required',
             'description' => 'required',
             'link' => 'required',
-            'icon' => 'required',
+            // 'icon' => 'required',
             'order' => 'numeric',
             'section' => 'required',
         ];

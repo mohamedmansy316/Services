@@ -19,10 +19,10 @@
                                     @csrf
                                     <div class="tab-content">
                                         <div class="row">
-                                            <div class="col-lg-6 mb-2">
+                                            {{-- <div class="col-lg-6 mb-2">
                                                 <div class="form-group">
                                                     <label class="form-control-label">إسم اللغة بالعربية <span class="text-danger">*</span></label>
-                                                    <input class="form-control" name="ar_lang_name" type="text" placeholder="إسم الخدمة باللغة العربية" required>
+                                                    <input class="form-control" name="ar_lang_name" type="text" placeholder="إسم اللغة العربية" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 mb-2">
@@ -36,7 +36,7 @@
                                                     <label class="form-control-label">الوصف بالعربية <span class="text-danger">*</span></label>
                                                     <input class="form-control" name="ar_description" type="text" placeholder="وصف الخدمة باللغة العربية" required>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             {{-- <div class="col-lg-6 mb-2">
                                                 <div class="form-group">
                                                     <label class="form-control-label">كود اللغة <span class="text-danger">*</span></label>
@@ -50,9 +50,9 @@
                                             </div> --}}
                                             <div class="col-lg-6 mb-2">
                                                 <div class="form-group">
-                                                    <label class="form-control-label">إسم اللغة <span class="text-danger">*</span></label>
+                                                    <label class="form-control-label">اللغة <span class="text-danger">*</span></label>
                                                     <select class="form-control" name="lang_name" required>
-                                                        <option value="">اختر إسم اللغة</option>
+                                                        <option value="">اختر اللغة</option>
                                                         @foreach ($AllLanguages->all() as $lang)
                                                             <option value="{{$lang->id}}">{{$lang->lang_name}}</option>
                                                         @endforeach
@@ -61,8 +61,8 @@
                                             </div>
                                             <div class="col-lg-6 mb-2">
                                                 <div class="form-group">
-                                                    <label class="form-control-label">العنوان</label>
-                                                    <input class="form-control" name="title" type="text" placeholder="ادخل عنوان الخدمة" required>
+                                                    <label class="form-control-label">اسم الخدمة</label>
+                                                    <input class="form-control" name="title" type="text" placeholder="اسم الخدمة" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 mb-2">

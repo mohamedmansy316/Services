@@ -1,0 +1,10 @@
+@import "main";
+@font-face {
+    font-family: "kufi";
+    src: url("../fonts/Droid-Arabic-Kufi.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+    font-family: kufi, poppins !important;
+  }

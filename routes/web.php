@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Auth::routes();
+// Route::get('/{lang?}', function () {
+//     return view('home');
+// });
+// Route::get('/{lang?}', [App\Http\Controllers\ServiceController::class, 'getServices'])->name('home');
+Route::get('/{lang?}', [ServiceController::class , 'getServices'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::group(['prefix' => 'admin' , 'middleware' => 'admin'], function(){
