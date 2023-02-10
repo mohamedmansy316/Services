@@ -16,18 +16,18 @@ class ServiceController extends Controller{
         if(!$TheLang){
             abort(404);
         }
-        $AllServices = Service::where('lang_name', '=', $TheLang->id)->get();
+        $AllServices = Service::where('lang_name', '=', $TheLang->id)->where('section', '!=', 'websites')->get();
         $MainServices = Service::where([
             'lang_name' => $TheLang->id,
             'section' => 'websites'
         ])->get();
-        return view('home', compact('AllServices', 'MainServices'));
+        return view('index', compact('AllServices', 'MainServices'));
     }
     public function getAdminServices(){
         $AllServices = Service::all();
         return view('admin.services.all', compact('AllServices'));
     }
-    public function getCreateService($lang){
+    public function getCreateService(){
         $AllLanguages = Languages::select('id', 'lang_code', 'lang_name')->get();
         return view('admin.services.new', compact('AllLanguages'));
     }

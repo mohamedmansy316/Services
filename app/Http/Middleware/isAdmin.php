@@ -19,10 +19,12 @@ class isAdmin
             if(auth()->user()->role == 1){
                 return $next($request);
             }else{
-                abort(404);
+                return redirect()->route('home');
+                // abort(404);
             }
         }else{
-            return redirect()->route('login');
+            return redirect()->route('home');
+
         }
     }
 }

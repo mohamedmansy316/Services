@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/{lang?}', function () {
-//     return view('home');
+// Route::get('/', function () {
+//     return view('index');
 // });
 // Route::get('/{lang?}', [App\Http\Controllers\ServiceController::class, 'getServices'])->name('home');
 Route::get('/{lang?}', [ServiceController::class , 'getServices'])->name('home');
+// Route::get('/', [ServiceController::class , 'getServices'])->name('home');
 
 Auth::routes();
 

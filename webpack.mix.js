@@ -6,6 +6,6 @@ mix.options({
     processCssUrls: false
   });
   mix.js('resources/js/app.js', 'public/js')
-  .sass('resources/scss/admin.scss' , 'public/admin/css/style.css')
+  .sass('resources/scss/admin.scss' , 'public/admin/css')
 .sass('resources/scss/app.scss' , 'public/css')
-  .browserSync('http://localhost/services/');
+  .browserSync('http://localhost/services');
