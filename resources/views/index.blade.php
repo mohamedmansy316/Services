@@ -48,12 +48,12 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="https://islamhouse.com/ar">الرئيسة</a></li>
-                        <li class="menu-has-children"><a href="">اللغات</a>
+                        {{-- <li class="menu-has-children"><a href="">اللغات</a>
                             <ul>
                               <li><a href="blog-home.html">Blog Home</a></li>
                               <li><a href="blog-single.html">Blog Single</a></li>
                             </ul>
-                          </li>
+                          </li> --}}
                         <li><a href="https://d1.islamhouse.com/data//ar/about/index.html">من نحن</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
