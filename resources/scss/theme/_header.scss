@@ -35,7 +35,20 @@
       margin-left:20px;
   }
 }
-
+@media(min-width:768px){
+    #logo{
+        img{
+            width: 230px;
+        }
+    }
+}
+@media(max-width:769px){
+    #logo{
+        img{
+            width: 200px;
+        }
+    }
+}
 .nav-menu li:hover > a, .menu-active,  .parent-active > .sf-with-ul{
   color: $primary-color!important;
 }
@@ -115,8 +128,8 @@
   text-decoration: none;
   display: inline-block;
   color: $black;
-  font-weight:500;  
-  font-size: 12px;
+  font-weight:500;
+  font-size: 15px;
   text-transform: uppercase;
   outline: none;
 }
@@ -177,7 +190,7 @@
 
 #mobile-nav-toggle i {
   color: $black;
-  font-weight: 900;  
+  font-weight: 900;
 }
 
 @media (max-width: 991px) {

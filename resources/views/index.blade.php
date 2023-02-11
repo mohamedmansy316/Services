@@ -29,7 +29,10 @@
     <link rel="stylesheet" href="{{ url('public/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/magnific-popup.css') }}">
     {{-- <link rel="stylesheet" href="{{ url('public/css/jquery-ui.css') }}"> --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="{{ url('public/css/animate.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url('public/css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/app.css') }}">
 </head>
@@ -39,12 +42,18 @@
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="https://islamhouse.com/ar"><img width="70px" src="{{ url('public/img/logo.png') }}"
+                    <a href="https://islamhouse.com/ar"><img src="{{ url('public/img/islamhouse.com-logo.png') }}"
                             alt="Islam House Logo" title="Islam House Logo" /></a>
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="https://islamhouse.com/ar">الرئيسة</a></li>
+                        <li class="menu-has-children"><a href="">اللغات</a>
+                            <ul>
+                              <li><a href="blog-home.html">Blog Home</a></li>
+                              <li><a href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                          </li>
                         <li><a href="https://d1.islamhouse.com/data//ar/about/index.html">من نحن</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
@@ -53,27 +62,30 @@
     </header><!-- #header -->
 
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h3 class="modal-title fs-5" id="exampleModalLabel">بيان الاسلام</h3>
-            <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="far fa-times-circle"></i></span>
-            {{-- <button type="button" ></button> --}}
-        </div>
-        <div class="modal-body">
-            <div class="row justify-content-around">
-                <h3><a href="https://islamhouse.com/ar/category/769/showall/showall/1/" class="genric-btn success radius">للمسلمين</a></h3>
-                <h3><a href="https://islamhouse.com/ar/category/768/showall/showall/1/" class="genric-btn success radius">لغير المسلمين</a></h3>
-            </div>
-        </div>
-        {{-- <div class="modal-footer">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="exampleModalLabel">بيان الاسلام</h3>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle"></i></span>
+                    {{-- <button type="button" ></button> --}}
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-around">
+                        <h3><a href="https://islamhouse.com/ar/category/769/showall/showall/1/"
+                                class="genric-btn success radius">للمسلمين</a></h3>
+                        <h3><a href="https://islamhouse.com/ar/category/768/showall/showall/1/"
+                                class="genric-btn success radius">لغير المسلمين</a></h3>
+                    </div>
+                </div>
+                {{-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
         </div> --}}
+            </div>
+        </div>
     </div>
-    </div>
-</div>
 
 
     <!-- Start services Area -->
@@ -91,7 +103,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/islam.png')}}" alt="">
+                        <img width="70px" src="{{ url('public/img/islam.png') }}" alt="">
                         <a href="https://islamhouse.com/">
                             <h4>موقع دار الإسلام</h4>
                         </a>
@@ -102,8 +114,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/islam.png')}}" alt="">
-                        <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><h4>بيان الاسلام</h4></a>
+                        <img width="70px" src="{{ url('public/img/islam.png') }}" alt="">
+                        <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <h4>بيان الاسلام</h4>
+                        </a>
                         <p>
                             بيان للمسلمين ولغير المسلمين
                         </p>
@@ -111,7 +125,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/موسوعة القران.png')}}" alt="">
+                        <img width="70px" src="{{ url('public/img/موسوعة القران.png') }}" alt="">
                         <a href="https://quranenc.com/ar">
                             <h4>موسوعة القرآن الكريم</h4>
                         </a>
@@ -122,8 +136,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/موسوعة الأحاديث.png')}}" alt="">
-                        <a href="https://islamhouse.com/">
+                        <img width="70px" src="{{ url('public/img/موسوعة الأحاديث.png') }}" alt="">
+                        <a href="https://hadeethenc.com/ar">
                             <h4>موسوعة الأحاديث النبوية</h4>
                         </a>
                         <p>
@@ -133,8 +147,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/موسوعة الامصطلحات.png')}}" alt="">
-                        <a href="https://islamhouse.com/">
+                        <img width="70px" src="{{ url('public/img/موسوعة الامصطلحات.png') }}" alt="">
+                        <a href="https://terminologyenc.com/ar">
                             <h4>موسوعة المصطلحات الإسلامية</h4>
                         </a>
                         <p>
@@ -144,12 +158,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-services">
-                        <img width="70px" src="{{url('public/img/مقالات اسلامية.png')}}" alt="">
-                        <a href="https://islamhouse.com/">
+                        <img width="70px" src="{{ url('public/img/مقالات اسلامية.png') }}" alt="">
+                        <a href="https://islamhouse.com/read/#lang_ar">
                             <h4>موسوعة الكتب الدعوية النصية</h4>
                         </a>
                         <p>
-                            بوابة تعرض آلاف الكتب الدعوية بعشرات اللغات بصورة نصية، مع إمكانية الوصول إلى ترجمات المادة والصيغ المتوفرة بها.
+                            بوابة تعرض آلاف الكتب الدعوية بعشرات اللغات بصورة نصية، مع إمكانية الوصول إلى ترجمات المادة
+                            والصيغ المتوفرة بها.
                         </p>
                     </div>
                 </div>
@@ -189,7 +204,8 @@
                         <div class="relative">
                             <a href="https://islamhouse.com/ar/subscribe" class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="{{ url('public/img/search.jpg') }}" alt="">
+                                <img width="70px" class=" img-fluid" src="{{ url('public/img/search.jpg') }}"
+                                    alt="">
                             </a>
                             <a href="https://islamhouse.com/ar/subscribe/">
                                 <div class="middle">
@@ -198,130 +214,152 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/ar/subscribe/" class="p-inner d-block">
                             <h4>باحث الموسوعات</h4>
                             <div class="cat">محرك بحث في عدد من الموسوعات والمصادر الإسلامية المترجمة.</div>
-                        </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all interactive_files">
                         <div class="relative">
                             <a href="https://islamhouse.com/search/#/ar" class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/s.png" alt="">
+                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/s.png"
+                                    alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/search/#/ar" class="p-inner d-block">
                             <h4>ابحث في IslamHouse.com</h4>
-                            <div class="cat">بحث متقدم في محتويات IslamHouse.com مع تصفيات للنتائج حسب اللغة أو النوع.</div>
-                        </div>
+                            <div class="cat">بحث متقدم في محتويات IslamHouse.com مع تصفيات للنتائج حسب اللغة أو
+                                النوع.</div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all others">
                         <div class="relative">
-                            <a href="https://islamhouse.com/ar/showall/showall/1/" class="thumb d-flex justify-content-center">
+                            <a href="https://islamhouse.com/ar/showall/showall/1/"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/1.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/1.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/ar/showall/showall/1/" class="p-inner d-block">
                             <h4>آخر الإضافات بجميع اللغات</h4>
                             <div class="cat">تعرف على جديد المواد الدعوية الموثوقة بعشرات اللغات.</div>
-                        </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all websites">
                         <div class="relative">
-                            <a href="https://d1.islamhouse.com/data/ar/caller-to-islam.mp4" class="thumb d-flex justify-content-center">
+                            <a href="https://d1.islamhouse.com/data/ar/caller-to-islam.mp4"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/unnamed.jpg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/unnamed.jpg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://d1.islamhouse.com/data/ar/caller-to-islam.mp4" class="p-inner d-block">
                             <h4>كن داعيًا بلغات العالم</h4>
                             <div class="cat">دليل الاستخدام المرئي لموقع دار الإسلام.</div>
-                        </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all interactive_files">
                         <div class="relative">
-                            <a href="https://islamhouse.com/lite/index.php/daawa-cart?lang=ar" class="thumb d-flex justify-content-center">
+                            <a href="https://islamhouse.com/lite/index.php/daawa-cart?lang=ar"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/2.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/2.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/lite/index.php/daawa-cart?lang=ar" class="p-inner d-block">
                             <h4>السلة الدعوية</h4>
-                            <div class="cat">اصنع سلتك الدعوية الإلكترونية بأي لغة كانت ثم أرسلها وشاركها إلى من تحب.</div>
-                        </div>
+                            <div class="cat">اصنع سلتك الدعوية الإلكترونية بأي لغة كانت ثم أرسلها وشاركها إلى من
+                                تحب.</div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all services">
                         <div class="relative">
-                            <a href="https://d1.islamhouse.com/data/ar/ih_books/single_010/dawah-library.pdf" class="thumb d-flex justify-content-center">
+                            <a href="https://d1.islamhouse.com/data/ar/ih_books/single_010/dawah-library.pdf"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/5.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/5.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://d1.islamhouse.com/data/ar/ih_books/single_010/dawah-library.pdf" class="p-inner d-block">
                             <h4>كتب PDF دعوية مميزة</h4>
-                            <div class="cat">6500 ملف PDF للتنزيل الفوري بعشرات اللغات لأهم المحتويات الدعوية المختارة بعناية.</div>
-                        </div>
+                            <div class="cat">6500 ملف PDF للتنزيل الفوري بعشرات اللغات لأهم المحتويات الدعوية
+                                المختارة بعناية.</div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all videos">
                         <div class="relative">
                             <a href="https://developers.islamhouse.com/ar/" class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/api.png" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/api.png" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://developers.islamhouse.com/ar/" class="p-inner d-block">
                             <h4>API IslamHouse.com</h4>
                             <div class="cat">خدمة خاصة للمبرمجين تمكنهم من الاستفادة من محتويات IslamHouse.com</div>
-                        </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all apps">
                         <div class="relative">
-                            <a href="https://wa.me/966550588755?text=(اشتراك)" class="thumb d-flex justify-content-center">
+                            <a href="https://wa.me/966550588755?text=(اشتراك)"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/whatsapp.png" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/whatsapp.png" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://wa.me/966550588755?text=(اشتراك)" class="p-inner d-block">
                             <h4>قائمة المراسلة</h4>
-                            <div class="cat">انضم معنا لقائمة مراسلات جماعية خاصة لمستجدات واحتياجات مواقع دار الإسلام</div>
-                        </div>
+                            <div class="cat">انضم معنا لقائمة مراسلات جماعية خاصة لمستجدات واحتياجات مواقع دار
+                                الإسلام</div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all advocacy_services">
                         <div class="relative">
-                            <a href="https://islamhouse.com/ar/category/397053/showall/showall/1" class="thumb d-flex justify-content-center">
+                            <a href="https://islamhouse.com/ar/category/397053/showall/showall/1"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/1.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/1.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/ar/category/397053/showall/showall/1" class="p-inner d-block">
                             <h4>تعريب المواد</h4>
                             <div class="cat">استعراض محتويات أكثر من 120 لغة باللغة العربية واللغة المستهدفة.</div>
-                        </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all land_pages">
                         <div class="relative">
                             <a href="https://islamhouse.com/add/" class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/add.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/add.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/add/" class="p-inner d-block">
                             <h4>طلب نشر مادة</h4>
-                            <div class="cat">المساهمة في إثراء المحتويات الدعوية بأي لغة بتقديم طلب نشر مادة جديدة.</div>
-                        </div>
+                            <div class="cat">المساهمة في إثراء المحتويات الدعوية بأي لغة بتقديم طلب نشر مادة جديدة.
+                            </div>
+                        </a>
                     </div>
                     <div class="single-portfolio col-sm-4 all land_pages">
                         <div class="relative">
-                            <a href="https://islamhouse.com/ar/category/49261/showall/showall/1	" class="thumb d-flex justify-content-center">
+                            <a href="https://islamhouse.com/ar/category/49261/showall/showall/1"
+                                class="thumb d-flex justify-content-center">
                                 <div class="overlay overlay-bg"></div>
-                                <img width="70px" class=" img-fluid" src="https://islamhouse.com/services/as/isslam.jpeg" alt="">
+                                <img width="70px" class=" img-fluid"
+                                    src="https://islamhouse.com/services/as/isslam.jpeg" alt="">
                             </a>
                         </div>
-                        <div class="p-inner">
+                        <a href="https://islamhouse.com/ar/category/49261/showall/showall/1" class="p-inner d-block">
                             <h4>التعريف بالإسلام</h4>
                             <div class="cat">مواد تعريفية بالإسلام بعشرات اللغات.</div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -330,31 +368,68 @@
     </section>
     <!-- End portfolio-area Area -->
 
-    <!-- Start brands Area -->
-    <section class="brands-area">
-        <div class="container">
-            <div class="brand-wrap">
-                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
+    <section id="counter" class="in-numbers section-gap">
+        <div class="numbers wow fadeInUp" data-wow-duration="2s">
+            <div class="container">
+                <div style="margin-bottom: 18px;" class="row">
+                    <div style="margin-bottom: 35px;" class="col-12">
+                        <h2 style="margin-bottom: 18px;" class="text-center font-weight-bold my-5">أرقام و
+                            احصائيات</h2>
+                        <div class="line">
+                        </div>
                     </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 col-lg-4 col-6">
+                        <div class="static-card">
+                            <img src="https://islamhouse.com/volunteer/assets/images/languages.svg" width="100">
+                            <p> <span class="counter-value" data-count="116">0</span><br> لغة في دار الإسلام</p>
+                        </div>
                     </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
+                    <div class="col-12 col-lg-4 col-6">
+                        <div class="static-card">
+                            <img src="https://islamhouse.com/volunteer/assets/images/countries.svg" width="100">
+                            <p> <span class="counter-value" data-count="204">0</span><br> دولة تزور موقع دار الإسلام
+                            </p>
+                        </div>
                     </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
+                    <div class="col-12 col-lg-4 col-6">
+                        <div class="static-card">
+                            <img src="https://islamhouse.com/volunteer/assets/images/visitors.svg" width="100">
+                            <p> <span class="counter-value" data-count="1512848">0</span><br>متوسط الزوار شهرياً
+                                لـمواقعنا</p>
+                        </div>
                     </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="static-card">
+                            <img src="https://islamhouse.com/volunteer/assets/images/volunteers.svg" width="100">
+                            <p> <span class="counter-value" data-count="547">0</span><br> متطوع في بوابة التطوع</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-6">
+                        <div class="static-card">
+                            <img src="https://islamhouse.com/volunteer/assets/images/files.svg" width="100">
+                            <p> <span class="counter-value" data-count="1683">0</span><br>مساهمة ترجمة في بوابة
+                                التطوع </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-6 d-flex flex-column">
+                        <div style="opacity: 1;height: 100%;;" class="static-card">
+                            <img style="width:180px;" src="https://islamhouse.com/volunteer/img/new_logo.png">
+                            <h3 style="line-height: 39px; font-size: 17px; font-weight: bold; margin-top: 20px;
+                            margin-bottom: 10px ;color:#317eac;">
+                                تحميل تطبيق موسوعة تراجم معاني القرآن الكريم
+                            </h3>
+                            <a href="https://apps.apple.com/app/id1561769281"><img style="width:96px;"
+                                    src="https://islamhouse.com/volunteer/img/IPhone.jpeg"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.quranenc.app"><img
+                                    style="width:115px;" src="https://islamhouse.com/volunteer/img/Android.jpeg"></a><br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End brands Area -->
 
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
@@ -368,47 +443,75 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4 class="text-white mb-3">روابط هامة</h4>
                     <ul>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/ar/tawasal" target="_blank">اتصل بنا</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="http://quranenc.com/" target="_blank">موسوعة ترجمات القرآن</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://terminologyenc.com/" target="_blank">موسوعة المصطلحات المترجمة</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://d1.islamhouse.com/html/disclaimer.htm" target="_blank">إخلاء المسئولية</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/chat/" target="_blank">لتعريف أصدقاءك بالإسلام</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/read/" target="_blank">مقالات إسلامية</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://islamhouse.com/ar/tawasal" target="_blank">اتصل بنا</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="http://quranenc.com/"
+                                target="_blank">موسوعة ترجمات القرآن</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="https://terminologyenc.com/"
+                                target="_blank">موسوعة المصطلحات المترجمة</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://d1.islamhouse.com/html/disclaimer.htm" target="_blank">إخلاء
+                                المسئولية</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="https://islamhouse.com/chat/"
+                                target="_blank">لتعريف أصدقاءك بالإسلام</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="https://islamhouse.com/read/"
+                                target="_blank">مقالات إسلامية</a></li>
                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-6 footer-links">
+                </div>
+                <div class="col-lg-2 col-6 footer-links">
                     <h4 class="text-white mb-3 invisible">روابط هامة</h4>
                     <ul>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/apps/" target="_blank">تطبيقات IslamHouse</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/ar/download-excel/section/showall/showall/" target="_blank">تنزيل جميع العناوين (Excel)</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://d1.islamhouse.com/html/policy.htm" target="_blank">سياسة الخصوصية</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://islamhouse.com/ar/category/889549/showall/showall/1/" target="_blank">إصدارات مرشحة للطباعة</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://hadeethenc.com/" target="_blank">موسوعة الأحاديث المترجمة</a></li>
-                      <li class="mb-1"><i class="bi bi-chevron-right"></i> <a href="https://d1.islamhouse.com/data//ar/about/index.html" target="_blank">من نحن؟</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="https://islamhouse.com/apps/"
+                                target="_blank">تطبيقات IslamHouse</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://islamhouse.com/ar/download-excel/section/showall/showall/"
+                                target="_blank">تنزيل جميع العناوين (Excel)</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://d1.islamhouse.com/html/policy.htm" target="_blank">سياسة الخصوصية</a>
+                        </li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://islamhouse.com/ar/category/889549/showall/showall/1/"
+                                target="_blank">إصدارات مرشحة للطباعة</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white" href="https://hadeethenc.com/"
+                                target="_blank">موسوعة الأحاديث المترجمة</a></li>
+                        <li class="mb-1"><i class="bi bi-chevron-right"></i> <a class="text-white"
+                                href="https://d1.islamhouse.com/data//ar/about/index.html" target="_blank">من نحن؟</a>
+                        </li>
                     </ul>
-                  </div>
-                  <div class="col-lg-5 col-md-12 footer-contact text-center text-md-start">
+                </div>
+                <div class="col-lg-5 col-md-12 footer-contact text-center text-md-start">
                     <h4 class="text-white">اتبعنا على</h4>
                     <div class="social-links mt-3">
-                      <div class="">
-                        <a target="_blank" href="https://islamhouse.info/wa-ar" class="social-icon"><i class="text-white fa-brands fa-whatsapp"></i></a>
-                      <a target="_blank" href="https://t.me/islamhouse" class="social-icon"><i class="text-white fa-brands fa-telegram"></i></a>
-                      <a target="_blank" href="https://islamhouse.com/RSS/IslamHouse-all-AR-AR.xml" class="social-icon"><i class="text-white fa-solid fa-square-rss"></i></a>
-                      </div>
-                      <a href="https://islamhouse.com/ar/subscribe" class="btn btn-transparent btn-primary p-3 mt-2 d-inline-block text-white">انضم إلى القائمة البريدية</a>
+                        <div class="">
+                            <a target="_blank" href="https://islamhouse.info/wa-ar" class="social-icon"><i
+                                    class="text-white fa-brands fa-whatsapp"></i></a>
+                            <a target="_blank" href="https://t.me/islamhouse" class="social-icon"><i
+                                    class="text-white fa-brands fa-telegram"></i></a>
+                            <a target="_blank" href="https://islamhouse.com/RSS/IslamHouse-all-AR-AR.xml"
+                                class="social-icon"><i class="text-white fa-solid fa-square-rss"></i></a>
+                        </div>
+                        <a href="https://islamhouse.com/ar/subscribe"
+                            class="btn btn-transparent btn-primary p-3 mt-2 d-inline-block text-white">انضم إلى القائمة
+                            البريدية</a>
                     </div>
 
-                  </div>
+                </div>
             </div>
         </div>
     </footer>
     <!-- End footer Area -->
 
-    <script src="{{ url('public/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    {{-- <script src="{{ url('public/js/jquery.matchHeight.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- <script src="{{ url('public/js/jquery-migrate-3.0.0.js') }}"></script> --}}
     <script src="{{ url('public/js/popper.min.js') }}"></script>
     {{-- <script src="{{ url('public/js/vendor/bootstrap.min.js') }}"></script> --}}
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"> --}}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
     <script src="{{ url('public/js/easing.min.js') }}"></script>
     <script src="{{ url('public/js/hoverIntent.js') }}"></script>
@@ -421,10 +524,50 @@
     <script src="{{ url('public/js/waypoints.min.js') }}"></script>
     <script src="{{ url('public/js/jquery.counterup.min.js') }}"></script>
     <script src="{{ url('public/js/simple-skillbar.js') }}"></script>
-    <script src="{{ url('public/js/owl.carousel.min.js') }}"></script>
+    {{-- <script src="{{ url('public/js/owl.carousel.min.js') }}"></script> --}}
     <script src="{{ url('public/js/mail-script.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+        integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ url('public/js/main.js') }}"></script>
+    <script src="{{ url('public/js/app.js') }}"></script>
 </body>
+<script>
+    $( document ).ready(function() {
+       //Homepage Counter Script
+    let counterContainer = document.querySelector('#counter');
+    if(counterContainer){
+        $(window).scroll(function () {
+            var oTop = $("#counter").offset().top - window.innerHeight;
+            // alert($(window).scrollTop() > oTop)
+            if ($(window).scrollTop() > oTop) {
+                $(".counter-value").each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr("data-count");
+                    $({
+                        countNum: $this.text(),
+                    }).animate(
+                        {
+                            countNum: countTo,
+                        },
+                        {
+                            duration: 5000,
+                            easing: "swing",
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            },
+                        }
+                    );
+                });
+                a = 1;
+            }
+        });
+    }
+});
+</script>
 
 </html>
